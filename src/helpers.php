@@ -14,11 +14,10 @@ if (!function_exists('setVariable')) {
     function setVariable(string $index, string $value)
     {
         if (!$variable = \Submtd\LaravelGlobalVariables\Models\GlobalVariable::find($index)) {
-            $variable = \Submtd\LaravelGlobalVariables\Models\GlobalVariable::create([
-                'index' => $index,
-                'value' => $value
-            ]);
+            $variable = new \Submtd\LaravelGlobalVariables\Models\GlobalVariable(['index' => $index]);
         }
+        $variable->value = $value;
+        $variable->save();
         return true;
     }
 }

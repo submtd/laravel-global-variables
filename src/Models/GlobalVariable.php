@@ -13,6 +13,6 @@ class GlobalVariable extends Model
 
     public static function find(string $index)
     {
-        return $this->where('index', $index)->first();
+        return static::where('index', $index)->first();
     }
 }
