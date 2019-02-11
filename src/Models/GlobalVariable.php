@@ -1,0 +1,18 @@
+<?php
+
+namespace Submtd\LaravelGlobalVariables\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class GlobalVariable extends Model
+{
+    protected $fillable = [
+        'index',
+        'value',
+    ];
+
+    public static function find(string $index)
+    {
+        return $this->where('index', $index)->first();
+    }
+}

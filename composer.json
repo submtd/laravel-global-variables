@@ -1,0 +1,27 @@
+{
+    "name": "submtd/laravel-global-variables",
+    "description": "Key value global variables",
+    "authors": [
+        {
+            "name": "Steve Harmeyer",
+            "email": "harmeyersteve@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Submtd\\LaravelGlobalVariables\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Submtd\\LaravelGlobalVariables\\Providers\\LaravelGlobalVariablesServiceProvider"
+            ]
+        }
+    }
+}
